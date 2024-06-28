@@ -35,10 +35,10 @@ SET IDENTITY_INSERT supplier OFF;
 Repeat similar insert commands for other tables as needed, following the table structures defined above.
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE.md](URL) file for details.
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/fakhrimhd/supplier-inventory-db/blob/main/LICENSE.md) file for details.
 
 ## Contact
 For any queries regarding this project, please contact:
 
-Email: fakhrimhd@gmail.com
-Project Link: [link](https://fakhrimhd.webflow.io/work/project-1)
+Email: fakhrimhd@gmail.com \
+Project: [link](https://fakhrimhd.webflow.io/work/project-1)
