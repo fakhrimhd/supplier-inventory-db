@@ -41,4 +41,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](https://gi
 For any queries regarding this project, please contact:
 
 Email: fakhrimhd@gmail.com \
-Project: [link](https://fakhrimhd.webflow.io/work/project-1)
+Project: [link](https://fakhrimhd.webflow.io/projects/relational-supplier-inventory-database)
