@@ -1,6 +1,6 @@
 -- Creating the Supplier table
 CREATE TABLE supplier (
-    supplier_id INT IDENTITY(1,1) PRIMARY KEY,
+    supplier_id INT PRIMARY KEY,
     company_name NVARCHAR(100),
     contact_name NVARCHAR(100),
     contact_title NVARCHAR(50),
@@ -13,7 +13,7 @@ CREATE TABLE supplier (
 
 -- Creating the Material table
 CREATE TABLE material (
-    material_id INT IDENTITY(1,1) PRIMARY KEY,
+    material_id INT PRIMARY KEY,
     name NVARCHAR(100),
     description NVARCHAR(255),
     unit NVARCHAR(50)
@@ -21,7 +21,7 @@ CREATE TABLE material (
 
 -- Creating the Production Unit table
 CREATE TABLE production_unit (
-    unit_id INT IDENTITY(1,1) PRIMARY KEY,
+    unit_id INT PRIMARY KEY,
     unit_name NVARCHAR(100),
     address NVARCHAR(255),
     city NVARCHAR(100),
@@ -32,7 +32,7 @@ CREATE TABLE production_unit (
 
 -- Creating the Contract table
 CREATE TABLE contract (
-    contract_id INT IDENTITY(1,1) PRIMARY KEY,
+    contract_id INT PRIMARY KEY,
     supplier_id INT,
     material_id INT,
     unit_id INT,
@@ -48,9 +48,22 @@ CREATE TABLE contract (
     FOREIGN KEY (unit_id) REFERENCES production_unit(unit_id)
 )
 
+-- Creating the Orders table
+CREATE TABLE orders (
+    order_id INT PRIMARY KEY,
+    contract_id INT,
+    unit_id INT,
+    order_date DATE,
+    required_date DATE,
+    shipped_date DATE,
+    status NVARCHAR(50),
+    FOREIGN KEY (contract_id) REFERENCES contract(contract_id),
+    FOREIGN KEY (unit_id) REFERENCES production_unit(unit_id)
+)
+
 -- Creating the Unit Inventory table
 CREATE TABLE unit_inventory (
-    inventory_id INT IDENTITY(1,1) PRIMARY KEY,
+    inventory_id INT PRIMARY KEY,
     unit_id INT,
     material_id INT,
     quantity DECIMAL(18, 2),
