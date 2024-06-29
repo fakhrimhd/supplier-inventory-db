@@ -63,7 +63,6 @@ CREATE TABLE orders (
 
 -- Creating the Unit Inventory table
 CREATE TABLE unit_inventory (
-    inventory_id INT PRIMARY KEY,
     unit_id INT,
     material_id INT,
     quantity DECIMAL(18, 2),
