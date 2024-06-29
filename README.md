@@ -9,6 +9,7 @@ This personal project introduces a relational database designed to manage suppli
 - `material`: Details about materials supplied.
 - `production_unit`: Information on various production units within the company.
 - `contract`: Contract details, including associated supplier, material, and production unit.
+- `orders`: Records of orders linked to contracts.
 - `unit_inventory`: Inventory details for each material at each production unit.
 
 ## Database Setup
@@ -21,16 +22,11 @@ To interact with the database, use SQL queries to insert, update, delete, or sel
 
 ```sql
 -- Insert data into the Supplier table
--- Enable IDENTITY_INSERT for the supplier table
-SET IDENTITY_INSERT supplier ON;
 
 INSERT INTO supplier (supplier_id, company_name, address, city, province, postal_code, country)
 VALUES 
 (001, 'Supplier A', 'Address A', 'Jakarta', 'DKI Jakarta', '10110', 'IDN'),
 (002, 'Supplier B', 'Address B', 'Bekasi', 'Jawa Barat', '13000', 'IDN');
-
--- Disable IDENTITY_INSERT after the insert operation
-SET IDENTITY_INSERT supplier OFF;
 ```
 Repeat similar insert commands for other tables as needed, following the table structures defined above.
 
