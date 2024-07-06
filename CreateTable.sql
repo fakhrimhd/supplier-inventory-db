@@ -1,11 +1,9 @@
 -- Creating the Supplier table
 CREATE TABLE supplier (
     supplier_id INT PRIMARY KEY,
-    company_name VARCHAR(100),
-    contact_name VARCHAR(100),
-    contact_title VARCHAR(50),
+    company_name VARCHAR(150),
     address VARCHAR(255),
-    city VARCHAR(100),
+    city VARCHAR(150),
     province VARCHAR(100),
     postal_code VARCHAR(20),
     country VARCHAR(100),
@@ -14,7 +12,7 @@ CREATE TABLE supplier (
 -- Creating the Material table
 CREATE TABLE material (
     material_id INT PRIMARY KEY,
-    name VARCHAR(100),
+    material_name VARCHAR(150),
     description VARCHAR(255),
     unit VARCHAR(50)
 )
