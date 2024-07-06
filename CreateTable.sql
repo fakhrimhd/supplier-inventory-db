@@ -3,7 +3,7 @@ CREATE TABLE supplier (
     supplier_id INT PRIMARY KEY,
     company_name VARCHAR(150),
     address VARCHAR(255),
-    city VARCHAR(150),
+    city VARCHAR(100),
     province VARCHAR(100),
     postal_code VARCHAR(20),
     country VARCHAR(100),
@@ -20,7 +20,7 @@ CREATE TABLE material (
 -- Creating the Production Unit table
 CREATE TABLE production_unit (
     unit_id INT PRIMARY KEY,
-    unit_name VARCHAR(100),
+    unit_name VARCHAR(150),
     address VARCHAR(255),
     city VARCHAR(100),
     province VARCHAR(100),
